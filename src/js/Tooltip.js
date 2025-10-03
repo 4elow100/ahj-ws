@@ -12,8 +12,8 @@ export default class Tooltip {
     const arrow = createElement('div', 'tooltip-arrow');
     const inner = createElement('div', 'tooltip-inner');
 
-    tooltip.appendChild(arrow);
-    tooltip.appendChild(inner);
+    tooltip.append(arrow);
+    tooltip.append(inner);
 
     this.inner = inner;
     this.el = tooltip;
@@ -22,7 +22,7 @@ export default class Tooltip {
   show(elem, text) {
     this.inner.textContent = text;
 
-    elem.appendChild(this.el);
+    elem.append(this.el);
     this.el.classList.add('in');
 
     this.el.style = 'min-width: 302px';

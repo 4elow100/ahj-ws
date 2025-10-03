@@ -70,11 +70,11 @@ export default class ChatClient {
     const header = createElement('header', 'message-header');
     let userName = data.user.name;
 
-    container.appendChild(header);
+    container.append(header);
 
     const messageEl = createElement('div', 'message-text', data.message);
-    container.appendChild(messageEl);
-    messageList.appendChild(container);
+    container.append(messageEl);
+    messageList.append(container);
     if (this.isAuth) {
       if (data.user.name === this.user.name) {
         userName = 'You';
@@ -109,8 +109,8 @@ export default class ChatClient {
       image.src = defaultImage;
       image.setAttribute('alt', 'Photo of User');
 
-      avatar.appendChild(image);
-      container.appendChild(avatar);
+      avatar.append(image);
+      container.append(avatar);
 
       const userName = createElement('div', 'user-name');
       userName.textContent = data.name;
@@ -122,8 +122,8 @@ export default class ChatClient {
         }
       }
 
-      container.appendChild(userName);
-      usersList.appendChild(container);
+      container.append(userName);
+      usersList.append(container);
     });
   }
 }

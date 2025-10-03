@@ -2,7 +2,7 @@ import LoginWindow from './LoginWindow';
 
 document.addEventListener('DOMContentLoaded', () => {
   const loginWindow = new LoginWindow();
-  document.body.appendChild(loginWindow.el);
+  document.body.append(loginWindow.el);
 
   const messageField = document.querySelector('.message-textarea');
 

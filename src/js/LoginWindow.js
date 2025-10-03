@@ -20,7 +20,7 @@ export default class LoginWindow {
     const container = createElement('div', 'login-container');
 
     const header = createElement('header', 'login-header', 'Введите псевдоним');
-    container.appendChild(header);
+    container.append(header);
 
     const form = createElement('form', 'login-form');
 
@@ -28,16 +28,16 @@ export default class LoginWindow {
     input.type = 'text';
     input.setAttribute('aria-label', 'Login Input Field');
     this.input = input;
-    form.appendChild(input);
+    form.append(input);
 
     const button = createElement('button', 'login-btn btn', 'Продолжить');
-    form.appendChild(button);
+    form.append(button);
 
     this.form = form;
 
-    container.appendChild(form);
+    container.append(form);
 
-    back.appendChild(container);
+    back.append(container);
 
     this.el = back;
     this._eventListeners();

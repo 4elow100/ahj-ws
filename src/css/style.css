@@ -98,7 +98,7 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    height: 800px;
+    height: 80vh;
     padding: 20px 18px 20px 20px;
 
     background-color: #fdfdfd;
@@ -188,7 +188,8 @@ body {
     position: relative;
     box-sizing: border-box;
     display: flex;
-    width: 240px;
+    min-width: 240px;
+    max-width: 500px;
     min-height: 80px;
     max-height: calc(100% - 40px);
     margin-top: 20px;
